@@ -1,0 +1,135 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+#left-flex{
+    background-color: #57c3b8;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1, h2{
+    color: white;
+    font-weight: 200;
+    font-size: 3em
+}
+h2{
+    border-bottom: 2px solid #57c3b8;
+    display: inline;
+}
+h3{
+    color: white;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3em
+}
+form input{
+    border: none;
+    border-bottom: 0.5px rgba(128, 128, 128, 0.997) solid;
+    background-color: transparent;
+    padding-bottom: 0.7em;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em
+}
+input:focus {
+    outline:0px
+    }
+
+.btn{
+    color: white;
+    font-weight: 300;
+    border: none;
+    background-color: #57c3b8;
+    padding: 0.9em 0em;
+    margin-top: 2em;
+    border-radius: 120px;
+    cursor: pointer;
+    width: 35%;
+    font-size: 0.8em
+}
+.btn:hover{
+    border: #57c3b8 1px solid;
+    background-color: transparent;
+    transition: 0.5s
+}
+#eliminar-usuario {
+padding-top: 2em
+}
+.btn-eliminar {
+    background-color: white;
+    color: #57c3b8
+}
+input::-webkit-input-placeholder {
+    font-weight: 300;
+    font-size: 0.8em; 
+    font-family: 'Raleway', sans-serif;
+}
+#right-flex {
+    background-color: #263343;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#right-flex div{
+    width: 70%;
+    padding-top: 3em 
+}
+
+.is-valid {
+    border:#57c3b8 1px solid;
+    transition: 400ms
+}
+
+.is-invalid {
+    border: rgb(198, 83, 83) 1px solid;
+    transition: 400ms
+}
+
+#mainList {
+    margin: 0;
+    padding: 0
+}
+
+.list-group-item {
+    list-style: none;
+    border-bottom: 1px black solid;
+}
+.list-group-item h4{
+    font-weight: 300;
+    color: #263343
+}
+.list-group-item p{
+    color: #263343
+}
+.list-group-item h3{
+    font-size: 1.5em;
+    font-weight: 200
+}
+
+
+
+
+@media (max-width: 600px); {
+    section{
+        flex-direction: column
+    }
+}
