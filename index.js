@@ -19,11 +19,11 @@ function validarNombre (event){
     if (typeof inputNode.value == 'string') {
         inputNode.classList.remove('is-invalid')
         inputNode.classList.add('is-valid');
-        console.log ('todo bien');
+        console.log (inputNode.value);
     } else {
         inputNode.classList.remove('is-valid')
         inputNode.classList.add('is-invalid');
-        console.log('todo mal');
+        console.log('invalid input' + inputNode.value);
     }
 
     validateSubmit()
@@ -31,16 +31,15 @@ function validarNombre (event){
 
 function validarDni (event){
     var inputNode = event.target;
-    
 
-    if (inputNode.value > 0) {
+    if (typeof inputNode.value) {
         inputNode.classList.remove('is-invalid')
         inputNode.classList.add('is-valid');
-        console.log ('todo bien')
+        console.log (inputNode.value)
     } else {
         inputNode.classList.remove('is-valid')
         inputNode.classList.add('is-invalid');
-        console.log('todo mal');
+        console.log('dni erroneo: ' + inputNode.value);
     }
 
     validateSubmit()
@@ -51,11 +50,11 @@ function validateSubmit () {
     var addStudentButtonNode = document.getElementById('agregar-btn')
     var inputFields = document.getElementsByClassName('is-valid')
     if (inputFields.length === 2) {
-        addStudentButtonNode.disabled = true;
-        setLocalList();
+        addStudentButtonNode.disabled = false;
+        setLocalList ();
     } else {
-        addStudentButtonNode.disabled = true;
-        setLocalList();
+        addStudentButtonNode.disabled = false;
+        setLocalList ();
     }
   }
 
@@ -106,8 +105,6 @@ function createStudentNode (newStudent){
     liNode.innerHTML = 
     '<h3>' +
     newStudent.nombre +
-    ' ' +
-    newStudent.lastName +
     '</h3>' +
     '<h4>DNI:' +
     newStudent.dni +
@@ -127,7 +124,6 @@ function cargaInicial (studentsList){
 cargaInicial(studentsList)
 
 
-
 function deleteStudent () {
   var deleteDniValue = deleteDniNode.value
 
@@ -137,9 +133,9 @@ function deleteStudent () {
 
   setLocalList(list, studentsList)
     
-  var studentDeleted = document.getElementById(deleteDniValue)
+  console.log('usuario eliminado: '+deleteDniNode.value )
 
-  console.log(studentDeleted)
+  var studentDeleted = document.getElementById(deleteDniValue)
 
   mainListNode.removeChild(studentDeleted)
 
@@ -159,7 +155,4 @@ function searchStudent (dni, studentsList) {
   
     return -1
   }
-
-
-
   
