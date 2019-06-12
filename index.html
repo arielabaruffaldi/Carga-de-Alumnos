@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista alumnos</title>
+    <title>Listado de alumnos</title>
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,200i,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,200i,300,400,500,600,700,800,900"
+        rel="stylesheet">
 </head>
-<body>
-    <section >
-        <div id="left-flex">
-                <h1>Listado de alumnos</h1>
-                <ul id="mainList">
 
-                </ul>
+<body>
+    <section>
+        <div id="left-flex">
+            <h1>Listado de alumnos</h1>
+            <ul id="mainList">
+
+            </ul>
         </div>
         <div id="right-flex">
             <div>
                 <h2>Ingreso de datos</h2>
-                
+
                 <form action="" method="post">
-                    <h3>nombre</h3>
-                        <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre completo"> 
-                    <h3>DNI</h3>
-                        <input type="text" name="dni" id ="dni" placeholder="DNI"> 
-                        <input type="button" value="Agregar alumno" class="btn" id="agregar-btn">
+                    <div>
+                        <h3>nombre</h3>
+                        <input type="text" name="nombre" id="nombre" placeholder="Dale Cooper">
+                    </div>
+                    <div>
+                        <h3>DNI</h3>
+                        <input type="text" name="dni" id="dni" placeholder="1359758">
+                    </div>
+                    <div>
+                        <h3>Mail</h3>
+                        <input type="text" name="mail" id="mail" placeholder="dalecooper@twinpeaks.com">
+                    </div>
+                    <input type="button" value="Agregar alumno" class="btn" id="agregar-btn">
                     <h3 id="eliminar-usuario">DNI</h3>
-                        <input type="text" name="dni" placeholder="DNI" id="dniDelete">
-                        <input type="button" value="Eliminar alumno" class="btn-eliminar btn" id="btn-eliminar">
+                    <input type="text" name="dni" placeholder="DNI" id="dniDelete">
+                    <input type="button" value="Eliminar alumno" class="btn-eliminar btn" id="btn-eliminar">
                 </form>
             </div>
         </div>
     </section>
     <script src="index.js"></script>
-   
+
 </body>
+
 </html>

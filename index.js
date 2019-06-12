@@ -3,6 +3,7 @@ var studentsList = getLocalList(list)
 
 var nombre = document.getElementById('nombre');
 var dni = document.getElementById('dni');
+var email = document.getElementById('email');
 var addStudentButtonNode = document.getElementById('agregar-btn');
 var mainListNode = document.getElementById ('mainList');
 var deleteDniNode = document.getElementById('dniDelete');
@@ -103,14 +104,14 @@ function createStudentNode (newStudent){
     liNode.id = newStudent.dni;
 
     liNode.innerHTML = 
-    '<h3>' +
+    '<h4>' +
     newStudent.nombre +
-    '</h3>' +
-    '<h4>DNI:' +
+    '</h4>' +
+    '<h5>DNI:' +
     newStudent.dni +
-    '</h4><p>E-mail:' +
+    '</h5><h5>E-mail:' +
     newStudent.email +
-    '</p>'
+    '</h5>'
     return liNode
 }
 
@@ -152,7 +153,6 @@ function searchStudent (dni, studentsList) {
         return i
       }
     }
-  
     return -1
   }
   
